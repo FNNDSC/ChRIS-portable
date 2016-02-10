@@ -82,7 +82,7 @@ In the VM, I link to these directories using:
 sudo sshfs -o uid=6244,gid=1102,allow_other rudolph.pienaar@10.0.2.2:/ /mnt/kyon
 ```
 
-The <tt>10.0.2.2</tt> address is invariant. However, update the login <tt>rudolph.pienaar</tt> and paths according to your particular setup. Note that my paths reflect a Mac OS X naming convention (the users' home directory on my host is <tt>/Users</tt> while on a Linux host this would be <tt>/home<tt>.
+The <tt>10.0.2.2</tt> address is invariant. However, update the login <tt>rudolph.pienaar</tt> and paths according to your particular setup. Note that my paths reflect a Mac OS X naming convention (the users' home directory on my host is <tt>/Users</tt> while on a Linux host this would be <tt>/home</tt>.
 
 ## Startup the Orthanc PACS server
 
