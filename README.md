@@ -84,6 +84,29 @@ sudo sshfs -o uid=6244,gid=1102,allow_other rudolph.pienaar@10.0.2.2:/ /mnt/kyon
 
 The <tt>10.0.2.2</tt> address is invariant. However, update the login <tt>rudolph.pienaar</tt> and paths according to your particular setup. Note that my paths reflect a Mac OS X naming convention (the users' home directory on my host is <tt>/Users</tt> while on a Linux host this would be <tt>/home</tt>.
 
+### Caveats
+
+If you get an error:
+
+```bash
+sshfs Read: Connection reset by peer
+```
+
+This typically means that the ssh keys currently in the VM don't match up to the host. In that case, first do:
+
+```bash
+ssh 10.0.2.2
+```
+
+you should get an error, and in the error text a line about removing the key. Copy/paste that line into the terminal. You also need to the above as **root**, so do
+
+```bash
+sudo bash
+ssh 10.0.2.2
+```
+
+and similarly copy/paste the key remove command.
+
 ## Startup the Orthanc PACS server
 
 To startup the Orthancs PACS server, open a terminal on the VM -- either from the VirtualBox session directly, or log into the VM from the host using
