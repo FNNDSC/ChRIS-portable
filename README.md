@@ -1,3 +1,6 @@
+# Obsolete
+
+Please see https://chrisproject.org/docs/run
 
 ## Philosophy
 
